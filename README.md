@@ -6,22 +6,7 @@
 
 A comprehensive geospatial analytics dashboard for visualizing and analyzing Micro, Small, and Medium Enterprises (MSMEs) data across India. Built with Python Dash, this interactive portal provides data-driven insights into MSME distribution, social inclusion, employment patterns, and industry profiles.
 
-![Dashboard Preview](assets/dashboard_preview.png)
-
-## 📋 Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Data Profiles](#data-profiles)
-- [Screenshots](#screenshots)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## ✨ Features
-
 ### 🗺️ **Interactive Geospatial Visualization**
 - Real-time India map with state-wise MSME density
 - Bubble maps with dynamic sizing and color-coding
@@ -82,7 +67,6 @@ A comprehensive geospatial analytics dashboard for visualizing and analyzing Mic
 ## 📦 Installation
 
 ### Prerequisites
-
 - Python 3.8 or higher
 - pip (Python package manager)
 
@@ -97,13 +81,9 @@ A comprehensive geospatial analytics dashboard for visualizing and analyzing Mic
 2. **Create a virtual environment (recommended)**
    ```bash
    python -m venv venv
-   
+    
    # On Windows
    venv\Scripts\activate
-   
-   # On macOS/Linux
-   source venv/bin/activate
-   ```
 
 3. **Install dependencies**
    ```bash
@@ -159,32 +139,6 @@ The dashboard will be accessible at: **http://127.0.0.1:8050**
    - Drag and drop CSV files or click to browse
    - Verify upload success and reload dashboard
 
-## 📁 Project Structure
-
-```
-UDHAI/
-│
-├── app.py                          # Main Dash application
-├── requirements.txt                # Python dependencies
-├── README.md                       # Project documentation
-│
-├── assets/                         # Static assets
-│   └── emblem.jpg                  # Government emblem
-│
-├── Data Files/
-│   ├── msme_merged.csv            # Master dataset
-│   ├── location_profile.csv       # Location data
-│   ├── social_profile.csv         # Social metrics
-│   ├── employment_profile.csv     # Employment data
-│   ├── industry_profile.csv       # Industry classification
-│   └── composite_score.csv        # Development scores
-│
-├── JSON/                          # JSON data exports
-├── state_wise_csv/                # State-segregated datasets
-│
-├── run_dashboard.bat              # Windows launcher
-├── debug.bat                      # Debug launcher
-└── filter_helper.py               # Helper functions
 ```
 
 ## 📊 Data Profiles
@@ -221,55 +175,16 @@ UDHAI/
 - Final_MSME_Score, Category
 - Scale_Score, Social_Score, Employment_Score, Industry_Score
 
-## 🖼️ Screenshots
-
-### Dashboard Views
-- Location & Infrastructure Map
-- Social Inclusion Charts (Donut & Pie charts)
-- Employment Analytics
-- Industry Profile Distribution
-- Development Scorecard
-
 ### DSS Tools
 - Strategic Highlighting Interface
 - Top Districts Ranking
 
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a new branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 👥 Authors
 
 - **PRAVESH** - *Initial Development*
 
-## 🙏 Acknowledgments
-
-- Ministry of MSME, Government of India
-- ISRO Drought Monitoring Portal (UI Inspiration)
-- Indian Statistical Institute for data methodology
-- Open-source community for amazing tools
-
-## 📞 Contact
-
-For questions or support, please open an issue on GitHub.
-
----
-
 **Built with ❤️ for India's MSME Ecosystem**
-
----
-
-## 🔧 Troubleshooting
 
 ### Common Issues
 
@@ -292,44 +207,6 @@ For questions or support, please open an issue on GitHub.
    - Check internet connection (requires OpenStreetMap)
    - Verify state coordinates in STATE_COORDS dictionary
 
-## 🚀 Deployment
-
-### Deploy to Production
-
-#### Using Gunicorn (Linux/macOS)
-```bash
-pip install gunicorn
-gunicorn app:server -b 0.0.0.0:8050
-```
-
-#### Using Heroku
-1. Create `Procfile`:
-   ```
-   web: gunicorn app:server
-   ```
-
-2. Deploy:
-   ```bash
-   heroku create your-app-name
-   git push heroku main
-   ```
-
-#### Using Docker
-1. Create `Dockerfile`:
-   ```dockerfile
-   FROM python:3.9-slim
-   WORKDIR /app
-   COPY requirements.txt .
-   RUN pip install -r requirements.txt
-   COPY . .
-   CMD ["python", "app.py"]
-   ```
-
-2. Build and run:
-   ```bash
-   docker build -t msme-dashboard .
-   docker run -p 8050:8050 msme-dashboard
-   ```
 
 ## 📈 Future Enhancements
 
@@ -344,4 +221,3 @@ gunicorn app:server -b 0.0.0.0:8050
 
 ---
 
-**Last Updated**: January 2026
